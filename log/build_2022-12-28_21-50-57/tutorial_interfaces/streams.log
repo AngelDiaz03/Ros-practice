@@ -1,0 +1,70 @@
+[0.016s] Invoking command in '/home/miguel/ros2_ws/build/tutorial_interfaces': CMAKE_PREFIX_PATH=/home/miguel/ros2_ws/install/my_robot_controller:/opt/ros/foxy /usr/bin/cmake /home/miguel/ros2_ws/src/tutorial_interfaces -DCMAKE_INSTALL_PREFIX=/home/miguel/ros2_ws/install/tutorial_interfaces
+[0.228s] -- The C compiler identification is GNU 9.4.0
+[0.359s] -- The CXX compiler identification is GNU 9.4.0
+[0.371s] -- Check for working C compiler: /usr/bin/cc
+[0.430s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.432s] -- Detecting C compiler ABI info
+[0.489s] -- Detecting C compiler ABI info - done
+[0.500s] -- Detecting C compile features
+[0.501s] -- Detecting C compile features - done
+[0.505s] -- Check for working CXX compiler: /usr/bin/c++
+[0.569s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.570s] -- Detecting CXX compiler ABI info
+[0.639s] -- Detecting CXX compiler ABI info - done
+[0.651s] -- Detecting CXX compile features
+[0.652s] -- Detecting CXX compile features - done
+[0.658s] -- Found ament_cmake: 0.9.11 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.692s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.692s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.889s] -- Found ament_lint_auto: 0.9.7 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[0.965s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[0.972s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.983s] -- Found rosidl_adapter: 1.3.0 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[1.079s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[1.103s] -- Found FastRTPS: /opt/ros/foxy/include  
+[1.190s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.245s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+[1.402s] CMake Error at /opt/ros/foxy/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:60 (message):
+[1.402s]   execute_process(/usr/bin/python3 -m rosidl_adapter --package-name
+[1.402s]   tutorial_interfaces --arguments-file
+[1.402s]   /home/miguel/ros2_ws/build/tutorial_interfaces/rosidl_adapter__arguments__tutorial_interfaces.json
+[1.402s]   --output-dir
+[1.402s]   /home/miguel/ros2_ws/build/tutorial_interfaces/rosidl_adapter/tutorial_interfaces
+[1.402s]   --output-file
+[1.402s]   /home/miguel/ros2_ws/build/tutorial_interfaces/rosidl_adapter/tutorial_interfaces.idls)
+[1.402s]   returned error code 1:
+[1.402s] 
+[1.403s]   Traceback (most recent call last):
+[1.403s] 
+[1.403s]     File "/usr/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+[1.403s]       return _run_code(code, main_globals, None,
+[1.403s]     File "/usr/lib/python3.8/runpy.py", line 87, in _run_code
+[1.403s]       exec(code, run_globals)
+[1.403s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/__main__.py", line 19, in <module>
+[1.403s]       sys.exit(main())
+[1.403s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/main.py", line 53, in main
+[1.403s]       abs_idl_file = convert_to_idl(
+[1.403s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/__init__.py", line 24, in convert_to_idl
+[1.403s]       return convert_srv_to_idl(
+[1.403s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/srv/__init__.py", line 28, in convert_srv_to_idl
+[1.403s]       srv = parse_service_string(package_name, input_file.stem, content)
+[1.404s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/parser.py", line 852, in parse_service_string
+[1.404s]       request_message = parse_message_string(
+[1.404s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/parser.py", line 540, in parse_message_string
+[1.404s]       msg = MessageSpecification(pkg_name, msg_name, fields, constants)
+[1.404s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/parser.py", line 387, in __init__
+[1.404s]       self.base_type = BaseType(
+[1.404s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/parser.py", line 204, in __init__
+[1.404s]       raise InvalidResourceName(
+[1.404s] 
+[1.404s]   rosidl_adapter.parser.InvalidResourceName: 'go_to_goal_Request' is an
+[1.404s]   invalid message name.  It should have the pattern '^[A-Z][A-Za-z0-9]*$'
+[1.404s] 
+[1.404s] Call Stack (most recent call first):
+[1.404s]   /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:130 (rosidl_adapt_interfaces)
+[1.404s]   CMakeLists.txt:37 (rosidl_generate_interfaces)
+[1.404s] 
+[1.404s] 
+[1.405s] -- Configuring incomplete, errors occurred!
+[1.405s] See also "/home/miguel/ros2_ws/build/tutorial_interfaces/CMakeFiles/CMakeOutput.log".
+[1.409s] Invoked command in '/home/miguel/ros2_ws/build/tutorial_interfaces' returned '1': CMAKE_PREFIX_PATH=/home/miguel/ros2_ws/install/my_robot_controller:/opt/ros/foxy /usr/bin/cmake /home/miguel/ros2_ws/src/tutorial_interfaces -DCMAKE_INSTALL_PREFIX=/home/miguel/ros2_ws/install/tutorial_interfaces
